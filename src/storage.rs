@@ -4,8 +4,7 @@
 use std::fmt;
 use thiserror::Error;
 use web_sys::Storage;
-use yew::format::Text;
-use yew::utils;
+use crate::format::Text;
 
 /// Represents errors of a storage.
 #[derive(Debug, Error)]
@@ -40,8 +39,8 @@ impl StorageService {
         let storage = {
             let storage = {
                 match area {
-                    Area::Local => utils::window().local_storage(),
-                    Area::Session => utils::window().session_storage(),
+                    Area::Local => gloo_utils::window().local_storage(),
+                    Area::Session => gloo_utils::window().session_storage(),
                 }
             };
             storage.map(Option::unwrap)

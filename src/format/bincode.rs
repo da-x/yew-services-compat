@@ -5,7 +5,7 @@
 ///
 /// ```rust
 /// // Converts (lazy) data to a Bincode
-///# use yew::format::Bincode;
+///# use crate::format::Bincode;
 ///# fn dont_execute() {
 ///# let data: String = unimplemented!();
 /// let dump = Bincode(&data);

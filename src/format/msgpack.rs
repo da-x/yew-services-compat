@@ -6,7 +6,7 @@
 /// ```
 /// // Converts (lazy) data to a MsgPack
 ///
-///# use yew::format::MsgPack;
+///# use crate::format::MsgPack;
 ///# fn dont_execute() {
 ///# let data: String = unimplemented!();
 /// let dump = MsgPack(&data);

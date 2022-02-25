@@ -5,7 +5,7 @@
 ///
 /// ```
 /// // Converts (lazy) data to a Yaml
-///# use yew::format::Yaml;
+///# use crate::format::Yaml;
 ///
 ///# fn dont_execute() {
 ///# let data: String = unimplemented!();

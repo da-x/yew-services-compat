@@ -6,7 +6,6 @@ use std::fmt;
 use wasm_bindgen::closure::Closure;
 use wasm_bindgen::{JsCast, JsValue};
 use yew::callback::Callback;
-use yew::utils;
 
 /// A handle to cancel a render task.
 #[must_use = "the task will be cancelled when the task is dropped"]
@@ -37,7 +36,7 @@ impl RenderService {
         };
         let handle = {
             let callback = Closure::wrap(Box::new(callback) as Box<dyn Fn(JsValue)>);
-            let render_id = utils::window()
+            let render_id = gloo_utils::window()
                 .request_animation_frame(callback.as_ref().unchecked_ref())
                 .unwrap();
             RenderTaskInner {
@@ -58,7 +57,7 @@ impl Task for RenderTask {
 impl Drop for RenderTask {
     fn drop(&mut self) {
         if self.is_active() {
-            utils::window()
+            gloo_utils::window()
                 .cancel_animation_frame(self.0.render_id)
                 .unwrap()
         }

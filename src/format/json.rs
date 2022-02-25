@@ -5,7 +5,7 @@
 ///
 /// ```
 /// // Converts (lazy) data to a Json
-/// use yew::format::Json;
+/// use crate::format::Json;
 /// let data: String = r#"{lorem: "ipsum"}"#.to_string();
 /// let dump = Json(&data);
 ///

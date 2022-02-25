@@ -5,7 +5,7 @@
 ///
 /// ```
 /// // Converts (lazy) data to a Cbor
-///# use yew::format::Cbor;
+///# use crate::format::Cbor;
 ///# fn dont_execute() {
 ///# let data: String = unimplemented!();
 /// let dump = Cbor(&data);

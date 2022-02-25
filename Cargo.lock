@@ -661,6 +661,7 @@ dependencies = [
  "anyhow",
  "base64 0.13.0",
  "gloo 0.2.1",
+ "gloo-utils",
  "http",
  "js-sys",
  "serde",

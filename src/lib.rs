@@ -16,6 +16,7 @@ pub mod resize;
 pub mod storage;
 pub mod timeout;
 pub mod websocket;
+pub mod format;
 
 #[doc(inline)]
 pub use self::console::ConsoleService;
